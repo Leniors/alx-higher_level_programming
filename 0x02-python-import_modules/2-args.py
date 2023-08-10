@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 from sys import argv
 length = len(argv)
-print("{} arguments:".format(length - 1))
-for i in range(1, length):
-    print("{}: {}".format(i, argv[i]))
+if length == 1:
+    print("{} arguments.".format(length - 1))
+elif length == 2:
+    print("{} argument:".format(length - 1))
+    print("{}: {}".format(length - 1, argv[length - 1]))
+elif length > 2:
+    print("{} arguments:".format(length - 1))
+    for i in range(1, length):
+        print("{}: {}".format(i, argv[i]))
