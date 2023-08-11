@@ -10,14 +10,14 @@ if __name__ == "__main__":
     else:
         a = int(argv[1])
         b = int(argv[3])
-        if argv[2] == "+":
+        if argv[2] == "*":
+            print("{} * {} = {}".format(a, b, calculator_1.mul(a, b)))
+            exit(0)
+        elif argv[2] == "+":
             print("{} + {} = {}".format(a, b, calculator_1.add(a, b)))
             exit(0)
         elif argv[2] == "-":
             print("{} - {} = {}".format(a, b, calculator_1.sub(a, b)))
-            exit(0)
-        elif argv[2] == "*":
-            print("{} * {} = {}".format(a, b, calculator_1.mul(a, b)))
             exit(0)
         elif argv[2] == "/":
             print("{} / {} = {}".format(a, b, calculator_1.div(a, b)))
