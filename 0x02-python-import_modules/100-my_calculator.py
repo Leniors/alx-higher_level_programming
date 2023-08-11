@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import calculator_1
-    from sys import argv
+    from calculator_1 import add, mul, div, sub
+    from sys import argv, exit
 
     length = len(argv)
     if length != 4:
@@ -9,19 +9,15 @@ if __name__ == "__main__":
         exit(1)
     else:
         a = int(argv[1])
+        operator = argv[2]
         b = int(argv[3])
-        if argv[2] == "*":
-            print("{} * {} = {}".format(a, b, calculator_1.mul(a, b)))
-            exit(0)
-        elif argv[2] == "+":
-            print("{} + {} = {}".format(a, b, calculator_1.add(a, b)))
-            exit(0)
-        elif argv[2] == "-":
-            print("{} - {} = {}".format(a, b, calculator_1.sub(a, b)))
-            exit(0)
-        elif argv[2] == "/":
-            print("{} / {} = {}".format(a, b, calculator_1.div(a, b)))
-            exit(0)
-        elif argv[2] != "+" or argv[2] != "-" or argv[2] != "*" or argv[2] != "/":
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+        if operator == "+":
+            result = add(a, b)
+        elif operator == "-":
+            result = sub(a, b)
+        elif operator == "*":
+            result = mul(a, b)
+        elif operator == "/":
+            result = div(a, b)
+
+        print("{} {} {} = {}".format(a, operator, b, result))
