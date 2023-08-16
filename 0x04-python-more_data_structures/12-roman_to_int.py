@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
         if roman_string[j] == "M" and roman_string[j - 1] != "C":
             my_list.append(1000)
         elif roman_string[j] == "X" and roman_string[j - 1] == "I":
-            my_list.append(9)
+            my_list.append(8)
         elif roman_string[j] == "C" and roman_string[j - 1] == "X":
             my_list.append(90)
         elif roman_string[j] == "M" and roman_string[j - 1] == "C":
