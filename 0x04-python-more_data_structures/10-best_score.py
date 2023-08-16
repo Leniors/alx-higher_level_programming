@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    minimum = 0
     if not a_dictionary:
         return
     for i in a_dictionary:
