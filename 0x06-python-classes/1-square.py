@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Define a class Square"""
+
+
 class Square:
-    """
-    Square - a square is a shape with four sides that have equal length
-    """
+    """Rep a class Square"""
     def __init__(self, size):
+        """initialize a class Square"""
         self.__size = size
