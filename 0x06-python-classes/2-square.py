@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+"""Define a class Square"""
+
+
 class Square:
-    """
-    Square - a square is a shape with four sides that have equal length
-    """
+    """Rep a class Square"""
     def __init__(self, size=0):
+        """initialize the class"""
         try:
-            if isinstance(size, int) == False:
+            if isinstance(size, int) is False:
                 raise TypeError
             elif size < 0:
                 raise ValueError
