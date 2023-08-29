@@ -1,6 +1,5 @@
 #!/usr/bin/python3
+"""Define a class square"""
 class Square:
-    """
-    Square - a square is a shape with four sides that have equal length
-    """
+    """Rep a Square"""
     pass
