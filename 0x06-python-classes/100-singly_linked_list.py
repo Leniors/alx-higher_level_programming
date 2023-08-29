@@ -58,9 +58,7 @@ class SinglyLinkedList:
                 current.next_node = new_node
                 return
             current = current.next_node
-
         current.next_node = new_node
-
 
     def __str__(self):
         """turn linked list data to string"""
