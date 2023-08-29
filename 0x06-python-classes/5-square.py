@@ -29,7 +29,7 @@ class Square:
     def my_print(self):
         """prints the square"""
         if self.__size == 0:
-            print("\n")
+            print()
         else:
             for i in range(self.__size):
                 for j in range(self.__size):
