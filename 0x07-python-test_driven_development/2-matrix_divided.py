@@ -5,6 +5,7 @@ takes two arguments
 Args: a matrix and divider
 """
 
+
 def matrix_divided(matrix, div):
     """
     implimenting the function

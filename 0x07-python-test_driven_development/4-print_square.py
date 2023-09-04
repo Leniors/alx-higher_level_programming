@@ -7,6 +7,9 @@ it one argument:
 
 
 def print_square(size):
+    """
+    implimenting the function
+    """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
     if size < 0:

@@ -7,6 +7,9 @@ checks for char: ".", "?" and ":"
 
 
 def text_indentation(text):
+    """
+    implimenting
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     length = len(text)
