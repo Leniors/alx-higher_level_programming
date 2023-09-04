@@ -2,6 +2,6 @@
 """module creating a Rectangle class"""
 
 
-class Rectangle(self):
+class Rectangle:
     """defining the class"""
     pass
