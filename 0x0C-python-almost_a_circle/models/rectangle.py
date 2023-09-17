@@ -91,7 +91,11 @@ class Rectangle(Base):
 
     def display(self):
         """draw the triangle"""
+        for k in range(self.__y):
+            print()
         for i in range(self.__height):
+            for l in range(self.__x):
+                print(" ", end="")
             for j in range(self.__width):
                 print("#", end="")
             print()
@@ -99,3 +103,30 @@ class Rectangle(Base):
     def __str__(self):
         """return string"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+    def update(self, *args, **kwargs):
+        """update values of the rectangle"""
+        if args:
+            length = len(args)
+            if length >= 1:
+                self.id = args[0]
+            if length >= 2:
+                self.__width = args[1]
+            if length >= 3:
+                self.__height = args[2]
+            if length >= 4:
+                self.__x = args[3]
+            if length >= 5:
+                self.__y = args[4]
+        elif kwargs:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """dictionary rep of Rectangle"""
+        return {'id': self.id,
+                'width': self.__width,
+                'height': self.__height,
+                'x': self.__x,
+                'y': self.__y}
