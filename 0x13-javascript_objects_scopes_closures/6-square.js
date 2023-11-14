@@ -12,13 +12,13 @@ module.exports = class Square extends Square1 {
         console.log(line);
       }
     } else {
-        for (let i = 0; i < this.height; i++) {
-          let line = '';
-          for (let j = 0; j < this.width; j++) {
-            line += 'X';
-          }
-          console.log(line);
+      for (let i = 0; i < this.height; i++) {
+        let line = '';
+        for (let j = 0; j < this.width; j++) {
+          line += 'X';
         }
+        console.log(line);
       }
+    }
   }
 };
