@@ -1,2 +1,2 @@
 -- Give description of a table
-SHOW COLUMNS FROM first_table
+SHOW COLUMNS FROM hbtn_0c_0.first_table
