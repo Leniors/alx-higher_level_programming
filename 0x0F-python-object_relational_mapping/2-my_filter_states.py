@@ -16,10 +16,9 @@ if __name__ == "__main__":
             host='localhost',
             port=3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id")
+    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id".format(searched))
     rows = cur.fetchall()
     for row in rows:
-        if row[1] == searched:
-            print(row)
+        print(row)
     cur.close()
     db.close()
