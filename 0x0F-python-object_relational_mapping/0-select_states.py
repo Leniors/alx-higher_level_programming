@@ -9,7 +9,7 @@ password = sys.argv[2]
 name = sys.argv[3]
 db = MySQLdb.connect(user=username, passwd=password, db=name, hostname='localhost', port=3306)
 cur = db.cursor()
-cur.execute("SELECT * FROM hbtn_0e_0_usa.states ORDER BY id")
+cur.execute("SELECT * FROM states ORDER BY states.id")
 rows = cur.fetchall()
 for row in rows:
     print(row)
