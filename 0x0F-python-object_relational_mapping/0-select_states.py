@@ -5,8 +5,6 @@ import sys
 
 if __name__ == "__main__":
     """only execute when specified"""
-    if len(sys.argv) != 4:
-        sys.exit()
     username = sys.argv[1]
     password = sys.argv[2]
     name = sys.argv[3]
