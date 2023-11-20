@@ -4,9 +4,9 @@ import sys
 
 if len(sys.argv) != 4:
     sys.exit()
-username = argv[1]
-password = argv[2]
-name = argv[3]
+username = sys.argv[1]
+password = sys.argv[2]
+name = sys.argv[3]
 db = MySQLdb.connect(user=username, passwd=password, db=name)
 cur = db.cursor()
 cur.execute("SELECT * FROM hbtn_0e_0_usa.states ORDER BY id")
