@@ -7,7 +7,7 @@ if len(sys.argv) != 4:
 username = sys.argv[1]
 password = sys.argv[2]
 name = sys.argv[3]
-db = MySQLdb.connect(user=username, passwd=password, db=name)
+db = MySQLdb.connect(user=username, passwd=password, db=name, hostname='localhost', port=3306)
 cur = db.cursor()
 cur.execute("SELECT * FROM hbtn_0e_0_usa.states ORDER BY id")
 rows = cur.fetchall()
