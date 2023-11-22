@@ -1,20 +1,25 @@
 #!/usr/bin/python3
-from sqlalchemy import create_engine, MetaData, select
+from sqlalchemy import create_engine, MetaData, select, Table, Column, Integer, String, insert
+from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 engine = create_engine('mysql://root:root@localhost/mydata')
-try:
-    conn = engine.connect()
-    print('Connected')
 
-    metadata = MetaData()
-    metadata.reflect(bind=engine)
-    for table in metadata.tables.keys():
-        print(table)
+Base = declarative_base()
 
-except Exception as e:
-    print(f'Error: {e}')
+class User(Base):
+    __tablename__ = 'users'
 
-finally:
-    if 'connection' in locals() and connection is not None:
-        conn.close()
-        print('Connection closed.')
+    id = Column(Integer(), primary_key=True, autoincrement=True, nullable=False)
+    name = Column(String(50), nullable=False)
+
+
+Base.metadata.create_all(bind=engine)
+
+new_user = User(name='Leeroy')
+nyanchwa = User(name='Nyanchwa')
+Session = sessionmaker(bind=engine)
+session = Session()
+session.add(new_user)
+session.add(nyanchwa)
+session.commit()
