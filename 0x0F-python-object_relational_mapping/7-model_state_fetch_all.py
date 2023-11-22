@@ -5,6 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
+    """only when called"""
     engine = create_engine(f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}')
     Session = sessionmaker(bind=engine)
     session = Session()
