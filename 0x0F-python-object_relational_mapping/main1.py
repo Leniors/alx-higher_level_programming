@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import MySQLdb
 
-db = MySQLdb.connect(host='localhost', user='root', passwd='root', db='hbtn_0e_4_usa')
+db = MySQLdb.connect(host='localhost', user='root', passwd='root', db='hbtn_0e_0_usa')
 cur = db.cursor()
-cur.execute("SHOW TABLES FROM hbtn_0e_4_usa")
+cur.execute("SELECT * FROM states")
 rows = cur.fetchall()
 for row in rows:
     print(row)

@@ -15,11 +15,9 @@ if __name__ == "__main__":
             host='localhost',
             port=3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
     rows = cur.fetchall()
     for row in rows:
-        sec_argv = row[1]
-        if sec_argv[0] == 'N':
             print(row)
     cur.close()
     db.close()
