@@ -18,8 +18,7 @@ if __name__ == "__main__":
             host='localhost',
             port=3306)
     cur = db.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
-    cur.execute(query, (searched,))
+    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id".format(searched))
     rows = cur.fetchall()
     for row in rows:
         print(row)
