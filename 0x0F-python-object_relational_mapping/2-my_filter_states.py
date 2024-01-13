@@ -2,7 +2,7 @@
 """lists all states from the database hbtn_0e_0_usa
 """
 import MySQLdb
-imprt sys
+import sys
 
 if __name__ == "__main__":
     """only execute when specified"""
