@@ -8,7 +8,8 @@ if __name__ == '__main__':
     """only when called"""
     if len(sys.argv) != 4:
         sys.exit()
-    engine = create_engine(f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}')
+    engine = create_engine(
+        f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}')
     Session = sessionmaker(bind=engine)
     session = Session()
     first_state = session.query(State).order_by(State.id).first()
