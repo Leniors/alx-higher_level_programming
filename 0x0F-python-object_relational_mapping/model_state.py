@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""model states
+"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import declarative_base
 
