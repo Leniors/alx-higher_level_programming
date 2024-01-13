@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Find state
+"""
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -8,7 +10,8 @@ if __name__ == '__main__':
     """only when called"""
     if len(sys.argv) != 5:
         sys.exit()
-    engine = create_engine(f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}')
+    engine = create_engine(
+        f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}')
     Session = sessionmaker(bind=engine)
     session = Session()
     search_name = sys.argv[4]
