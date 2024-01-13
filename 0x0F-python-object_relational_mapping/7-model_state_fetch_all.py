@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Listing all states
+"""
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
