@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""fetch url"""
+"""fetch url
+"""
 
 import urllib.request
 
