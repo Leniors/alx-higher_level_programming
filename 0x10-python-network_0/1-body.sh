@@ -1,3 +1,3 @@
 #!/bin/bash
-#body
-curl -s -o /dev/null -w "%{http_code}" $1
+# body
+response=$(curl -s -w "%{http_code}" $1) && [ "${response: -3}" == "200" ] && curl -s $1
