@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """header"""
-import urllib.request
 import sys
+import urllib.request
 
 with urllib.request.urlopen(sys.argv[1]) as response:
     """open url"""
