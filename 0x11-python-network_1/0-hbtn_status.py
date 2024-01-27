@@ -1,9 +1,8 @@
 #!/usr/bin/python3
+import urllib.request
 """fetch url"""
 if __name__ == "__main__":
     """work on execution only"""
-    import urllib.request
-
     with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
         content = response.read()
         print("Body response:")
