@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """header"""
-import sys
 import urllib.request
+import sys
 
-with urllib.request.urlopen(sys.argv[1]) as response:
+url = sys.argv[1]
+
+with urllib.request.urlopen(url) as response:
     x_request_id = response.getheader("X-Request-Id")
     print(x_request_id)
