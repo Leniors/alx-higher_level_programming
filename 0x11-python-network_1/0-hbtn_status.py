@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """fetch url"""
+
 import urllib.request
 
 if __name__ == "__main__":
