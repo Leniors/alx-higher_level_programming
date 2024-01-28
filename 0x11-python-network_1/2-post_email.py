@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """post"""
 import sys
-import urllib.request
-import urllib.parse
+import urllib
 
 url = sys.argv[1]
 values = {'email': sys.argv[2]}
