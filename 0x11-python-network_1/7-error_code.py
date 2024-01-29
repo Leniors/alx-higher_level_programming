@@ -5,4 +5,7 @@ import requests
 
 if __name__ == "__main__":
     req = requests.get(sys.argv[1])
-    print(f"Error code: {req.status_code}")
+    try:
+        print(req.text)
+    except:
+        print(f"Error code: {req.status_code}")
