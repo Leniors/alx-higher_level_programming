@@ -3,9 +3,10 @@
 import sys
 import urllib.request
 
-with urllib.request.urlopen(sys.argv[1]) as response:
-    """open url"""
-    head = response.headers
+if __name__ == "__main__":
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        """open url"""
+        head = response.headers
 
-req_id = head.get('X-Request-Id')
-print(req_id)
+    req_id = head.get('X-Request-Id')
+    print(req_id)
