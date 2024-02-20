@@ -7,11 +7,11 @@ request(url, (error, response, body) => {
   }
   const results = JSON.parse(body);
   let present = 0;
-  const films = results.results
-  for (let i in films) {
-    let characters = films[i].characters;
-    for (let j in characters) {
-      if (characters[j] == 'https://swapi-api.alx-tools.com/api/people/18/') {
+  const films = results.results;
+  for (const i in films) {
+    const characters = films[i].characters;
+    for (const j in characters) {
+      if (characters[j] === 'https://swapi-api.alx-tools.com/api/people/18/') {
         present += 1;
       }
     }
